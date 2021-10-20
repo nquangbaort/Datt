@@ -1,0 +1,39 @@
+/* CodePen styles */
+body {
+  font-size: 10vw;
+	color: gray;
+	margin: 30px;
+  text-align: center;
+  background-color: black;
+}
+
+/* Demo styles */
+.z-text {
+	animation: wobble 10s ease-in-out infinite;
+	transform: rotateX(30deg) rotateY(-30deg);
+  text-align: center;
+}
+
+.z-layer {
+   filter: brightness(0.7);
+}
+
+.z-layer:first-child {
+   filter: brightness(1);
+}
+
+@keyframes wobble {
+	0%,
+	100% {
+		transform: rotate3d(-1, 1, 0, 30deg);
+	}
+	25% {
+		transform: rotate3d(1, 1, 0, 30deg);
+	}
+	50% {
+		transform: rotate3d(1, -1, 0, 30deg);
+	}
+	75% {
+		transform: rotate3d(-1, -1, 0, 30deg);
+	}
+}
